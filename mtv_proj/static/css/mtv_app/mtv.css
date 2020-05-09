@@ -1,0 +1,7 @@
+h1, h2 {
+  color: green;
+}
+table, tr, td, thead, th {
+  border: 2px solid blue;
+  text-align: center
+  }

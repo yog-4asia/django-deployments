@@ -3,6 +3,7 @@
 
 
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <title>Kid's Web</title>
@@ -24,12 +25,12 @@
   </button> -->
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul  class="navbar-nav" style="font-family: 'Montserrat', sans-serif; color:'#f4f4f4'">
+    <ul  style="color:#f4f4f4" class="navbar-nav" style="font-family: 'Montserrat', sans-serif; color:'#f4f4f4'">
 
-      <li class="nav-item nav-link"><a href="{%url 'about'%}">About</a>
+      <li class="nav-item nav-link"><a style="color:#f4f4f4" href="{%url 'about'%}">About</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" style="vertical-align:middle">
+        <a style="color:#f4f4f4" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" style="vertical-align:middle">
           Maths
         </a>
         <div class="dropdown-menu">
@@ -39,24 +40,24 @@
           <a class="dropdown-item" href="{%url 'kids_tutorial:division' %}">Division</a>
         </div>
       </li>
-      <li style="color:'#f4f4f4'" class="nav-item nav-link"><a href="#">Geography</a>
+      <li  class="nav-item nav-link"><a style="color:#f4f4f4" href="#">Geography</a>
       </li>
-      <li class="nav-item nav-link"><a href="#">Quiz</a>
+      <li class="nav-item nav-link"><a style="color:#f4f4f4" href="#">Quiz</a>
       </li>
 </ul>
   </div>
       <div class="">
         <ul class="navbar-nav navbar-right" style="font-family: 'Montserrat', sans-serif;">
-          <li class="nav-item nav-link"><a href="{%url 'kids_usermgmt:register'%}">Signup</a>
+          <li class="nav-item nav-link"><a style="color:#f4f4f4" href="{%url 'kids_usermgmt:register'%}">Signup</a>
           </li>
 
             {% if user.is_authenticated%}
 
-            <li class="nav-item nav-link"><a href="{%url 'kids_usermgmt:user_logout'%}">Logout</a>
+            <li class="nav-item nav-link"><a style="color:#f4f4f4" href="{%url 'kids_usermgmt:user_logout'%}">Logout</a>
             </li>
 
             {%else%}
-            <li class="nav-item nav-link"><a href="{%url 'kids_usermgmt:user_login'%}">Login</a>
+            <li class="nav-item nav-link"><a style="color:#f4f4f4" href="{%url 'kids_usermgmt:user_login'%}">Login</a>
             </li>
                 {%endif%}
                 </ul>

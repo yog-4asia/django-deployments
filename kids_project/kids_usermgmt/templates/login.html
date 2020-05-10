@@ -3,10 +3,20 @@
 {%block content%}
 
 <div class="container" style = "font-family: 'Montserrat', sans-serif;">
-  <div class="jumbotron" style =  "background-color:#ffbd69; fonts">
-  <h1 style="text-align:center">You are logged in !!</h1>
+  <div class="jumbotron" style =  "background-color:#fff3cd; fonts">
+  <h1 style="text-align:center">Login Here.. !!</h1>
 
-
+  <form style="text-align: center" class="" action="{% url 'kids_usermgmt:user_login' %}" method="post">
+    {% csrf_token %}
+    <br>
+    <label for="username">Username: </label>
+    <input style="margin-left: 20px" type="text" name="username" placeholder="Enter Username">
+    <br><br>
+    <label for="password">Password: </label>
+    <input style="margin-left: 25px" type="password" name="password" placeholder="Password">
+    <br><br>
+    <input class="btn  btn-primary btn-lg" type="submit" name="" value="Login">
+  </form>
 
   </div>
 

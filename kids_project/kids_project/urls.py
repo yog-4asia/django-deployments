@@ -25,7 +25,7 @@ from . import views
 app_name = 'kids_project'
 
 urlpatterns = [
-    path('',views.home_page,name='index'),
+    path('index',views.home_page,name='index'),
     path('about',views.about,name='about'),
     path('admin/', admin.site.urls),
     path('',include('kids_tutorial.urls')),

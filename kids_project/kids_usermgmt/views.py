@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.urls import reverse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from kids_usermgmt.forms import UserForm, UserProfileInfoForm
 from django.contrib.auth import authenticate, login, logout
-# Create your views here.
 
 def register(request):
 
@@ -40,9 +40,11 @@ def user_login(request):
         password = request.POST.get('password')
 
         user = authenticate(username=username,password=password)
+        print ("the value of user user is ", user)
         if user:
             if user.is_active:
                 login(request,user)
+                print (user.username, " ", user.password)
                 return HttpResponseRedirect (reverse ('index'))
 
             else:
